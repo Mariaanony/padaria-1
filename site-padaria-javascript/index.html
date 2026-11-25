@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Pão & Afeto | Padaria</title><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="top">Feito com carinho todos os dias • Encomendas e retirada na loja</div>
+<header>
+    <a class="brand" href="#inicio">✦
+         <span>Pão <i>&</i> Afeto<small>PADARIA ARTESANAL</small></span></a>
+         <button id="menuToggle" class="menu">☰</button>
+         <nav id="nav">
+         <a href="#inicio">Início</a>
+         <a href="#produtos">Produtos</a>
+         <a href="#sobre">Nossa história</a>
+         <a href="#contato">Contato</a></nav>
+         <button id="openCart" class="cartBtn">Sacola <b id="cartCount">0</b></button
+            ></header>
+<main>
+<section class="hero" id="inicio"><div class="heroText">
+    <small class="eyebrow">ACABOU DE SAIR DO FORNO</small><h1>O sabor de um dia <em>bem começado.</em></h1>
+    <p>Pães quentinhos, receitas feitas com carinho e aquele cheirinho irresistível de padaria.</p>
+    <a class="btn" href="#produtos">Ver nossos produtos</a>
+    <p class="note">✦ Produção fresca todos os dias</p></div>
+    <div class="heroImg"></div>
+</section>
+<section class="benefits"><div>✦ <span><b>Fresquinho todo dia</b>
+    <small>Produção diária</small></span></div><div>♧ 
+        <span><b>Ingredientes selecionados</b>
+            <small>Qualidade em cada receita</small></span></div>
+            <div>♡ <span><b>Feito com carinho</b>
+                <small>Sabor que acolhe</small>
+            
+            </span></div>
+                <div>⌂ <span><b>Retire na loja</b>
+                    <small>Peça com praticidade</small></span></div></section>
+<section class="section" id="produtos">
+    <div class="heading"><div><small class="eyebrow">ESCOLHA SEU FAVORITO</small>
+        <h2>Delícias da nossa padaria</h2><p>Um carinho em forma de pão, doce ou café.</p></div><input id="search" placeholder="Buscar produto..."></div><div class="filters" id="filters"><button class="active" data-cat="Todos">Todos</button><button data-cat="Pães">Pães</button><button data-cat="Bolos">Bolos</button><button data-cat="Salgados">Salgados</button><button data-cat="Doces">Doces</button><button data-cat="Bebidas">Bebidas</button></div><div class="products" id="products"></div><p id="empty" class="empty hidden">Nenhum produto encontrado.</p></section>
+<section class="story" id="sobre">
+    <div class="storyImg"></div><div>
+    <small class="eyebrow">NOSSA HISTÓRIA</small>
+    <h2>Mais que uma padaria.<br><em>Um lugar de afeto.</em></h2>
+    <p>Acreditamos que os melhores momentos começam ao redor da mesa. Preparamos cada receita com cuidado, ingredientes selecionados e aquele toque caseiro que faz toda a diferença.</p><p>Venha tomar um café, leve seu pão favorito ou encomende algo especial para compartilhar.</p><a class="btn dark" href="#contato">Venha nos visitar</a></div></section>
+<section class="quote"><b>“</b>
+    <h2>Tem coisa melhor que pão quentinho<br>e café passado na hora?</h2>
+    <small>SEU MOMENTO, NOSSO CARINHO.</small></section>
+<section class="contact section" id="contato">
+    
+    
+    <div><small class="eyebrow">ESTAMOS ESPERANDO VOCÊ</small>
+        <h2>Seu próximo café<br>começa aqui.</h2>
+        <p>Passe para buscar suas delícias ou faça seu pedido pelo site.</p></div>
+        <div class="contactCard"><h3>Informações da loja</h3>
+            <p>⌖ Rua das Flores, 123 — Centro<br><small>Edite o endereço no index.html</small></p><p>◷ Segunda a sábado: 6h às 19h<br>Domingo: 7h às 12h</p><p>☎ (00) 00000-0000<br><small>Substitua pelo telefone da padaria</small></p></div></section>
+</main>
+<footer><a class="brand" href="#inicio">✦ <span>Pão 
+    <i>&</i> Afeto<small>PADARIA ARTESANAL</small>
+</span></a>
+<p>Feito com carinho, todos os dias. © <span id="year"></span></p>
+<a href="#inicio">Voltar ao topo ↑</a></footer>
+<div id="overlay" class="overlay hidden"></div>
+<aside id="drawer" class="drawer"><div class="drawerHead"><div>
+    <small class="eyebrow">SUA SELEÇÃO</small><h2>Sacola de compras</h2></div>
+    <button id="closeCart" class="x">×</button></div>
+    <div id="cartItems" class="cartItems"></div>
+    <div class="cartBottom">
+        <p>Subtotal <b id="total">R$ 0,00</b></p>
+        <small>Entrega e demais detalhes são combinados no fechamento.</small>
+        <button id="checkout" class="btn full">Finalizar pedido</button></div></aside>
+<div id="modal" class="modal hidden">
+    <form id="orderForm" class="modalCard">
+        <button type="button" id="closeModal" class="x">×</button>
+        <small class="eyebrow">SÓ MAIS UM PASSO</small>
+        <h2>Finalize seu pedido</h2>
+        <label>Seu nome<input name="name" required placeholder="Nome completo"></label>
+        <label>Telefone<input name="phone" required placeholder="(00) 00000-0000"></label>
+        <label>Recebimento<select name="delivery">
+            <option>Retirada na loja</option>
+            <option>Entrega (combinar endereço)</option></select></label>
+            <label>Observações<textarea name="notes" rows="3"></textarea></label>
+            <p class="totalLine">Total <b id="modalTotal">R$ 0,00</b></p>
+            <button class="btn full">Preparar pedido</button>
+            <small class="help">Configure o WhatsApp da loja no script.js para receber pedidos diretamente.</small></form></div>
+            <div id="toast" class="toast"></div>
+<script src="script.js"></script></body></html>
